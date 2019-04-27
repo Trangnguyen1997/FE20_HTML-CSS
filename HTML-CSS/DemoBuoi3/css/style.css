@@ -1,0 +1,458 @@
+header, section, footer, aside, nav, main, article, figure {
+    display: block; 
+  }
+/* RESET */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    color: black;
+    background-color: white;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+/* header */
+.header{
+    background-color: #4E2A84;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    /* z-index chỉ có hiệu lực khi đi với position */
+}
+.header__content{
+    width: 60%;
+    margin: 0 auto; /*canh đi vô giữa*/
+    display: flex; /*đi trên cùng 1 hàng*/
+    justify-content: space-between; /*s-b: ở giữa thằng con có khoảng cách*/
+    align-items: center;
+    padding: 20px 0;
+}
+.header__menu{
+    list-style: none;
+    display: flex;
+}
+.header__title{
+    color: white;
+    font-size: 40px;
+}
+/* +++++++ */
+.header__menu li{
+    margin-right: 20px;
+}  
+/* ++++++++ */
+.header__menu li a{
+    color: white;
+    text-decoration: none;
+    transition: color 1s;
+}
+.header__menu .active a{
+    color: #ff1783;
+}
+.header__menu li:hover a{
+    color: #ff1783;
+}
+
+/* cover */
+.cover{
+    background-image: url("../img/b3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center; /*center cho chiều dọc, chiều ngang*/
+    height: 570px;
+    display: flex;
+    align-items: center;
+}
+.cover__title{
+    font-size: 60px;
+    color: white;
+    letter-spacing: 3px; /*khoảng cách giữa các kí tự*/
+}
+.cover__text{
+    font-style: 20px;
+    color: white;
+    margin: 30px 0 20px 0;
+}
+.btn{
+    color: white;
+    background-color: #ff1783;
+    border: 1px solid white;
+    padding: 20px 30px;
+    border-radius: 5px;
+    cursor: pointer;/*hình bàn tay*/
+}
+.btn:hover{
+    border-color: #ff1783;
+    background-color: white;
+    color: black;
+}
+.cover__content{
+    text-align: center;
+    margin: 0 auto;
+    animation: fadeInUp 1s ease-in-out forwards;
+}
+/* about */
+.about__content{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /*tương đương vs 4 cái 1fr*/
+
+}
+.about img{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+/* .tradition{
+    grid-column: 1/2;
+} */
+.image{
+    grid-column: 2/4;
+}
+/* .creativity{
+    grid-column: 4/5;
+} */
+.about__item{
+    background-color: #4E2A84;
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+.about__item h2{
+    margin-bottom: 20px;
+}
+.about__item p{
+    line-height: 30px;
+}
+.tradition{
+    background-color:#4E2A84;
+    animation: fadeInRight 3s infinite 0s linear;
+}
+.creativity{
+    background-color: #ff1783;
+}
+/* row2 */
+
+.image2{
+    grid-column: 3/4;
+}
+.bake{
+    grid-column: 1/3;
+} 
+
+.bake{
+    background-color: #ff1783;
+}
+
+.quality{
+    background-color: #4E2A84;
+}
+/* row3 */
+.cake{
+    grid-column: 2/3;
+}
+.image4{
+    grid-column: 3/5;
+}
+.static{
+    padding: 50px 0;
+}
+.static__content{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+.static__item h1{
+    font-size: 30px;
+    color: #4E2A84;
+    margin-bottom: 30px;
+}
+.static__item p{
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+/* SERVICE */
+.services{
+    text-align: center;
+    background-image: url("../img/s1.jpg");
+    height: 500px;
+    background-size: cover;
+  }
+  .services h1{
+    color: white;
+    font-size: 50px;
+    padding: 30px 0;
+  }
+  
+  .services__content{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  .services__item{
+    margin-bottom: 20px;
+  }
+  .services__icon{
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #4E2A84;
+    border-radius: 50%;
+    background-color: white;
+  }
+  
+  .services__icon i{
+    color: #4E2A84;
+    font-size: 60px;
+    line-height: 100px;
+  }
+  .item__title{
+    margin: 20px 0;
+  }
+
+  /* GALLERY */
+.gallery{
+    padding: 50px 0;
+    text-align: center;
+  }
+  .gallery__title{
+    font-size: 50px;
+    margin-bottom: 50px;
+  }
+  .gallery__content{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+  }
+  .gallery img{
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  .item1{
+    grid-column: 1/3;
+  }
+  .item6{
+    grid-column: 3/5;
+  }
+  .gallery__item{
+    position: relative;
+  }
+  .item__content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 30px 10px;
+    text-align: right;
+  }
+
+/* TEAM */
+.team{
+  background-color: #4E2A84;
+  padding: 50px 0;
+}
+.team img{
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.team__title{
+  color: white;
+  text-align: center;
+  font-size: 50px;
+  margin-bottom: 50px;
+}
+.team__content{
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap: 30px;
+}
+.person{
+  position: relative;
+}
+.person__content{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #FF0E83;
+  width: 100%;
+  padding: 50px 30px;
+  opacity: 1;
+  transition: opacity 1s;
+}
+.person__content p:first-child{
+  color: white;
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin-bottom: 5px;
+}
+.person__content p:last-child{
+  color: white;
+}
+.person__detail{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0, 0.5);
+  padding: 50px 20px;
+  color: white;
+  opacity: 0;
+  transition: all 1s;
+}
+.person__detail p:first-child{
+  color: #FF0E83;
+  margin-bottom: 10px;
+}
+.person__detail p:nth-child(2){
+  margin-bottom: 10px;
+}
+.person__detail p:nth-child(3){
+  line-height: 30px;
+}
+.person__detail .button{
+  display: flex;
+}
+.social{
+  border: 1px solid white;
+  margin-right: 20px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+}
+.social i{
+  line-height: 40px;
+}
+.social:hover{
+  color: #FF0E83;
+  border-color: #FF0E83;
+}
+.person:hover .person__content{
+  opacity: 0;
+}
+.person:hover .person__detail{
+  opacity: 1;
+}
+/* TESTI */
+.testi{
+  background-image: url("../img/cc1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 50px 0; 
+  /* không sử dụng chiều cao ->padding */
+}
+.testi__title{
+  color: white;
+  font-size: 50px;
+  font-weight: bold;
+  text-transform: uppercase;
+  /* uppercase : viết hoa hết
+  capitalize : viết hoa chữ cái đầu*/
+  text-align: center;
+  margin-bottom: 50px;
+}
+.testi__content{
+  width: 80%;
+  margin: 0 auto;
+  border: 4px solid #FF0E83;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 50px 30px;
+  text-align: center;
+}
+.testi__author{
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+}
+.testi__item i{
+  color: #2CBEFF;
+  font-size: 30px;
+  margin: 0 30px;
+}
+.owl-dot.active span, .owl-dot:hover span{
+  background: #000!important;
+}
+.owl-dot span{
+  background: grey!important;
+}
+/* CONTACT */
+.contact{
+  padding: 50px 0;
+  /* trên dưới 50, trái phải 0 */
+}
+.contact__title{
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.contact__content{
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr,1fr;
+  grid-gap: 30px;
+}
+.contact__item input{
+  width: 100%;
+  padding:20px;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+.contact__item--message{
+  grid-column: 1/3;
+}
+.contact__item--message textarea{
+  width: 100%;
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+.btn--submit{
+  grid-column: 1/3;
+  width: 100%;
+  background-color: #FF0E83;
+  font-weight: bold;
+  text-align: center;
+  padding: 15px 0;
+}
+/* Định nghĩa animation (CSS3)*/ 
+@keyframes fadeInUp{
+  0%{
+    transform: translateY(50px);
+    /* translateY đi xuống */
+    opacity: 0;
+  }
+  100%{
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInRight{
+  0%{
+      transform: rotate(xx) translateX(0);
+      opacity: 1;
+      }
+  4%{
+      transform: rotate(xx) translateX(0);
+      opacity: 1;
+      }
+}
+
+.elementToAnimate{
+  animation: fadeInRight 3s infinite 0s linear;
+}
